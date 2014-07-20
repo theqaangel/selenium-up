@@ -13,7 +13,7 @@ public class Login extends BaseTest {
   @Test
   public void testLogin() {
 
-      loginPageView.login("qaagenttestuser@gmail.com", "qaagent_pass");
+      loginPageView.login("seleniumup@gmail.com", "testuser");
       mainView.isPresented(true);
   }
 
