@@ -1,14 +1,15 @@
-package core;
+package core.test;
 
 import java.lang.reflect.Method;
 
-import junit.framework.TestCase;
-
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 
 import reporting.Report;
 import annotations.Browser;
 import annotations.EntryPoint;
+import core.properties.PropertiesManager;
 import enums.Browsers;
 
 /**
@@ -18,27 +19,19 @@ import enums.Browsers;
  * @author Angel Tsvetkov
  * 
  */
-public class BaseTestCase extends TestCase {
+public class BaseTestCase {
 
-  /* (non-Javadoc)
-   * @see junit.framework.TestCase#setUp()
-   */
-  @Override
+  @BeforeTest
   protected void setUp() throws Exception {
-    super.setUp();
-    
+
     /* Load the properties file */
     PropertiesManager.initialise();
     executePrerequisites();
   }
 
-  /* (non-Javadoc)
-   * @see junit.framework.TestCase#tearDown()
-   */
-  @Override
+  @AfterTest
   protected void tearDown() throws Exception {
-    super.tearDown();
-    
+
     /* Close the browser and destroy the web driver */
     TestContext.getWebDriver().quit();
   }
@@ -47,7 +40,7 @@ public class BaseTestCase extends TestCase {
    * 
    */
   private void executePrerequisites() {
-    
+
     String url = null;
     Browsers browser = null;
 
@@ -90,17 +83,17 @@ public class BaseTestCase extends TestCase {
      * Check whether browser and entry point are set in test methods or in test class
      */
     if (url != null && browser != null) {
-      
+
       /* Open passed URL in selected browser */
       openBrowser(url, browser);
-      
+
     } else {
       Report.error("Browser or Entry Point are not set!");
     }
   }
 
   /**
-   * @param url which will be used when the browser is started 
+   * @param url which will be used when the browser is started
    * @param browser type. Currently only FireFox is supported
    */
   private void openBrowser(String url, Browsers browser) {

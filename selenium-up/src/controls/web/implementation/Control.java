@@ -16,8 +16,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import reporting.Report;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-import core.PropertiesManager;
-import core.TestContext;
+import core.properties.PropertiesManager;
+import core.test.TestContext;
 import enums.SearchBy;
 
 /**
