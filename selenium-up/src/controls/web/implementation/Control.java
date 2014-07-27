@@ -17,7 +17,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-import support.properties.PropertiesManager;
 import core.enums.SearchBy;
 import core.test.TestContext;
 
@@ -79,7 +78,7 @@ public class Control implements controls.web.interfaces.Control {
            * find.timeout.sec does not exist, the exception is thrown but the test should continue
            * with the default 30 seconds search timeout
            */
-          timeout = PropertiesManager.getInt("find.timeout.sec");
+          timeout = TestContext.getSettings().getSearchTimeout();
         } catch (Exception ex) {
 
         }

@@ -10,7 +10,6 @@ import org.testng.annotations.BeforeTest;
 
 import support.annotations.Browser;
 import support.annotations.EntryPoint;
-import support.properties.PropertiesManager;
 import core.enums.Browsers;
 
 /**
@@ -25,8 +24,6 @@ public class BaseTestCase {
   @BeforeTest
   protected void setUp() throws Exception {
 
-    /* Load the properties file */
-    PropertiesManager.initialise();
     executePrerequisites();
   }
 

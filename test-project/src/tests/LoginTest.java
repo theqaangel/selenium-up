@@ -8,7 +8,7 @@ import core.enums.Browsers;
 
 @EntryPoint("http://gmail.com")
 @Browser(Browsers.Firefox)
-public class Login extends BaseTest {
+public class LoginTest extends BaseTest {
 
   @Test
   public void testLogin() {

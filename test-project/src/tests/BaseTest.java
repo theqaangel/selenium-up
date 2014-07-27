@@ -1,5 +1,6 @@
 package tests;
 
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 import views.LoginPageView;
@@ -12,9 +13,17 @@ public class BaseTest extends BaseTestCase {
   MainView mainView;
   
   @BeforeTest
-  public void initTests()
+  public void setUp() throws Exception
   {
+    super.setUp();
+    
     initViews();
+  }
+  
+  @AfterTest
+  public void tearDown() throws Exception
+  {
+    super.tearDown();
   }
 
   public void initViews() {
