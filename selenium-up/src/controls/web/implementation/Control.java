@@ -1,5 +1,7 @@
 package controls.web.implementation;
 
+import modules.reporter.Report;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.By.ByClassName;
 import org.openqa.selenium.By.ByCssSelector;
@@ -14,11 +16,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import reporting.Report;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-import core.properties.PropertiesManager;
+import support.properties.PropertiesManager;
+import core.enums.SearchBy;
 import core.test.TestContext;
-import enums.SearchBy;
 
 /**
  * Control common representation

@@ -1,11 +1,11 @@
-package annotations;
+package support.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import enums.Browsers;
+import core.enums.Browsers;
 
 /**
  * Annotation for browser definition

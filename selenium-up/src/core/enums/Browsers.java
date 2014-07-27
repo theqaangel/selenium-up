@@ -1,4 +1,4 @@
-package enums;
+package core.enums;
 
 /**
  * Supported browser types. Currently only FirefOx browser is supported.

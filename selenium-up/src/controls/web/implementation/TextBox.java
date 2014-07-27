@@ -1,8 +1,8 @@
 package controls.web.implementation;
 
-import org.openqa.selenium.By;
+import modules.reporter.Report;
 
-import reporting.Report;
+import org.openqa.selenium.By;
 
 /**
  * TextBox representation

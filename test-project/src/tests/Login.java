@@ -2,9 +2,9 @@ package tests;
 
 import org.testng.annotations.Test;
 
-import annotations.Browser;
-import annotations.EntryPoint;
-import enums.Browsers;
+import support.annotations.Browser;
+import support.annotations.EntryPoint;
+import core.enums.Browsers;
 
 @EntryPoint("http://gmail.com")
 @Browser(Browsers.Firefox)

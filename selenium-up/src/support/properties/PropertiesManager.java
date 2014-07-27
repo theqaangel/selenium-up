@@ -1,10 +1,10 @@
-package core.properties;
+package support.properties;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-import reporting.Report;
+import modules.reporter.Report;
 
 /**
  * Read properties files

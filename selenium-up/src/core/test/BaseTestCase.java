@@ -2,15 +2,16 @@ package core.test;
 
 import java.lang.reflect.Method;
 
+import modules.reporter.Report;
+
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
-import reporting.Report;
-import annotations.Browser;
-import annotations.EntryPoint;
-import core.properties.PropertiesManager;
-import enums.Browsers;
+import support.annotations.Browser;
+import support.annotations.EntryPoint;
+import support.properties.PropertiesManager;
+import core.enums.Browsers;
 
 /**
  * This class extends jUnit TestCase class and should be inherit from the test project's base test

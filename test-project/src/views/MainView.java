@@ -1,6 +1,6 @@
 package views;
 
-import reporting.Report;
+import modules.reporter.Report;
 import controls.MainPage;
 import controls.web.implementation.BaseAutomationView;
 

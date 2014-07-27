@@ -1,4 +1,4 @@
-package reporting;
+package modules.reporter;
 
 import java.sql.Timestamp;
 
