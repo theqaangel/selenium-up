@@ -5,6 +5,7 @@
               directory with the processing instruction <?eclipse.ant.import?>
               as the first entry and export the buildfile again. --><project basedir="." default="build" name="selenium-up">
     <property environment="env"/>
+    <property name="version" value="0.0.1"/>
     <property name="ECLIPSE_HOME" value="../../../../../work/ide/eclipse-standard-luna-R-win32-x86_64/eclipse/"/>
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.7"/>
@@ -80,6 +81,10 @@
             <src path="src"/>
             <classpath refid="selenium-up.classpath"/>
         </javac>
+    	<jar destfile="../release/${version}/selenium-up.jar"
+    	     basedir="."
+    		 includes="bin/**"
+    		/>
     </target>
     <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
     <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
