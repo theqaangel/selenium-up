@@ -83,7 +83,7 @@
         </javac>
     	<jar destfile="../release/${version}/selenium-up.jar"
     	     basedir="." 
-    	     excludes="src/**, .settings/**, bin/**, build.xml">
+    	     excludes="src/**, .settings/**, bin/**, release/**, build.xml">
     		<fileset dir="bin" includes="**"/>
     	</jar>
     </target>
