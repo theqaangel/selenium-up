@@ -15,7 +15,7 @@
         <pathelement location="${ECLIPSE_HOME}plugins/org.hamcrest.core_1.3.0.v201303031735.jar"/>
     </path>
     <path id="TestNG.libraryclasspath">
-        <pathelement location="${ECLIPSE_HOME}plugins/org.testng.eclipse_6.8.6.20141201_2240/lib/testng.jar"/>
+        <pathelement location="3thparty/testng/testng-6.8.jar"/>
     </path>
     <path id="selenium-up.classpath">
         <pathelement location="bin"/>
