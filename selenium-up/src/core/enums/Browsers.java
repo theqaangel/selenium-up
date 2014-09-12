@@ -7,5 +7,5 @@ package core.enums;
  *
  */
 public enum Browsers {
-  Firefox, InternetExplorer, Chrome
+  Firefox, InternetExplorer, Chrome, Headless
 }

@@ -5,6 +5,7 @@ import java.lang.reflect.Method;
 import modules.reporter.Report;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
@@ -108,6 +109,12 @@ public class BaseTestCase {
 
       case Chrome: {
 
+      }
+        break;
+        
+      case Headless: {
+        
+        TestContext.setWebDriver(new HtmlUnitDriver(true));
       }
         break;
 
